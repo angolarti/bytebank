@@ -1,5 +1,11 @@
+// Class Abstract
 export class Conta {
   constructor (saldoInicial, cliente, agencia) {
+
+    if (this.constructor === Conta) {
+      throw new Error('Você nºao deveria intanciar um objecto do tipo Conta directamente, pois essa é uma classe abstracta!')
+    }
+  
     this._saldo = saldoInicial
     this._cliente = cliente
     this._agencia = agencia

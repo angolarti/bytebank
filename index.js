@@ -1,10 +1,12 @@
 import { Cliente } from './Cliente.mjs'
+import { Conta } from './Conta.js'
 import { ContaCorrente } from './ContaCorrente.mjs'
 import { ContaPoupanca } from './ContaPoupanca.js'
 
 const cliente1 = new Cliente('Walter', '0029080181BA037')
 
 const cliente2 = new Cliente('AB', '040480475')
+const conta = new Conta(cliente1, 1001)
 const contaCorrenteCliente1 = new ContaCorrente(cliente1, 1001)
 
 contaCorrenteCliente1.depositar(100)
