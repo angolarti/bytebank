@@ -32,9 +32,9 @@ export class Conta {
     this._saldo += valor
   }
 
+  // Método abstracto
   sacar (valor) {
-    let taxa = 1
-    return this.sacar(valor, taxa)
+    throw new Error('O método sacar da conta é abstracto')
   }
 
   _sacar (valor, taxa) {
