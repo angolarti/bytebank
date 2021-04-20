@@ -1,7 +1,8 @@
 export class Cliente {
-    constructor (nome, bi) {
+    constructor (nome, bi, senha) {
         this._nome = nome
         this._bi = bi
+        this._senha = senha
     }
 
     get bi () {
@@ -14,5 +15,9 @@ export class Cliente {
 
     get nome () {
         return this._nome
+    }
+
+    autenticar (senha) {
+        return senha === this._senha
     }
 }
