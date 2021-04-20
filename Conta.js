@@ -28,24 +28,17 @@ export class Conta {
 
   sacar (valor) {
     let taxa = 1
+    return this.sacar(valor, taxa)
+  }
 
-    if (this._tipo === 'corrente'){
-      taxa = 1.1
-    }
-
-    if (this._tipo === 'salario'){
-      taxa = 1.05
-    }
-
-    if (this._tipo === 'empresarial'){
-      taxa = 1.15
-    }
-
+  _sacar (valor, taxa) {
     const valorSacado = taxa * valor
     if (this._saldo >= valorSacado && valor > 0) {
-      this._saldo -= valor
+      this._saldo -= valorSacado
       return valor
     }
+
+    return 0
   }
 
   transferir (valor, conta) {

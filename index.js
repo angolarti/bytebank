@@ -10,12 +10,13 @@ const contaCorrenteCliente1 = new ContaCorrente(cliente1, 1001)
 contaCorrenteCliente1.depositar(100)
 contaCorrenteCliente1.depositar(200)
 
-console.log(contaCorrenteCliente1)
 console.log(`Saldo actual: ${contaCorrenteCliente1.saldo}`)
 
 const valorSacado = contaCorrenteCliente1.sacar(50)
 console.log(`Valor sacado: ${valorSacado}`)
+console.log(contaCorrenteCliente1)
 
 const contaPoupanaCliente2 = new ContaPoupanca(120, cliente2, 1002)
 
 console.log('Conta Poupança: ', contaPoupanaCliente2)
+console.log('Contas correntes: ', ContaCorrente.numeroDeContas)
